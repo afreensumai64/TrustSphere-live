@@ -1,73 +1,107 @@
-# Welcome to your Lovable project
+# 🚀 TrustCheck Live  
+### AI-Powered Fraud Detection & Smart KYC Verification System
 
-## Project info
+---
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## 🧠 Overview
 
-## How can I edit this code?
+**TrustCheck Live** is an AI-driven identity verification system that goes beyond traditional KYC by integrating fraud detection, behavioral analysis, and risk scoring.
 
-There are several ways of editing your application.
+This is a hackathon-ready prototype focused on demonstrating real-world impact using lightweight and scalable components.
 
-**Use Lovable**
+---
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+## 🎯 Problem Statement
 
-Changes made via Lovable will be committed automatically to this repo.
+Traditional KYC systems are vulnerable to:
+- Fake IDs
+- Deepfakes
+- Bot-based registrations
+- Identity fraud
 
-**Use your preferred IDE**
+Most existing solutions only perform OCR and face matching, which is insufficient.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 💡 Solution
 
-Follow these steps:
+TrustCheck Live uses a multi-layer verification approach:
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+- Document OCR Verification  
+- Face Matching using AI  
+- Liveness Detection  
+- Behavioral Biometrics  
+- Risk Scoring Engine  
+- Blockchain-inspired Tamper Detection  
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+---
 
-# Step 3: Install the necessary dependencies.
-npm i
+## 🏗️ System Architecture
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+### 🔹 Frontend
+- React / Flutter  
+- Upload ID  
+- Capture Selfie  
+- Display Risk Score  
 
-**Edit a file directly in GitHub**
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+#### Responsibilities:
+- Process images
+- Run AI models
+- Compute risk score
+- Return verification result
 
-**Use GitHub Codespaces**
+---
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 🤖 AI Components
 
-## What technologies are used for this project?
+### 📄 Document OCR
+- Tool: Tesseract OCR  
+- Extracts text from ID  
+- Validates fields (Name, DOB, ID Number)
 
-This project is built with:
+---
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+### 🧑 Face Matching
+- Model: FaceNet  
+- Convert images to embeddings  
+- Compare using cosine similarity  
 
-## How can I deploy this project?
+---
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+### 👁️ Liveness Detection
+- User actions:
+  - Blink  
+  - Turn head  
 
-## Can I connect a custom domain to my Lovable project?
+- Detection:
+  - Frame difference using OpenCV  
+  - Prevents spoofing via static images  
 
-Yes, you can!
+---
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+### ⌨️ Behavioral Biometrics
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Captured:
+- Typing intervals  
+- Mouse movement patterns  
+
+Logic:
+- Highly uniform behavior → flagged as bot  
+
+---
+
+## 📊 Risk Scoring
+
+Weighted scoring based on:
+- Face similarity  
+- OCR confidence  
+- Liveness result  
+- Behavioral patterns  
+
+### Example:
+```json
+{
+  "risk_score": 27,
+  "status": "Approved"
+}
