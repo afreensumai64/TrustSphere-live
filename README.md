@@ -1,5 +1,7 @@
 # 🚀 TrustCheck Live  
-### AI-Powered Fraud Detection & Smart KYC Verification System Live Demo: https://trustsphere-digital-kyc.vercel.app/
+### AI-Powered Fraud Detection & Smart KYC Verification System 
+
+Live Demo: https://trustsphere-digital-kyc.vercel.app/
 
 ---
 
